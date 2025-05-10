@@ -5,8 +5,9 @@ public class Division {
     private final int id;
     private String name;
 
-    public Division() {
+    public Division(String name) {
         this.id = _counter++;
+        this.name = name;
     }
 
     public static int get_counter() {
