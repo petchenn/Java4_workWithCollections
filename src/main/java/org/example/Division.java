@@ -1,31 +1,52 @@
 package org.example;
-
+/**
+ * Класс, представляющий подразделение (Division) в организации.
+ * Каждое подразделение имеет уникальный идентификатор и имя.
+ */
 public class Division {
+    /**
+     * Статический счетчик для генерации уникальных идентификаторов подразделений.
+     */
     private static int _counter = 0;
+    /**
+     * Уникальный идентификатор подразделения.  Это поле `final`, поэтому его значение устанавливается только в конструкторе.
+     */
     private final int id;
+    /**
+     * Название подразделения.
+     */
     private String name;
-
+    /**
+     * Конструктор класса Division.
+     * Создает новый объект Division с заданным именем и автоматически генерируемым уникальным идентификатором.
+     *
+     * @param name Название подразделения.
+     */
     public Division(String name) {
         this.id = _counter++;
         this.name = name;
     }
-
-    public static int get_counter() {
-        return _counter;
-    }
-
-    public static void set_counter(int _counter) {
-        Division._counter = _counter;
-    }
-
+    /**
+     * Возвращает уникальный идентификатор подразделения.
+     *
+     * @return Уникальный идентификатор подразделения.
+     */
     public int getId() {
         return id;
     }
-
+    /**
+     * Возвращает название подразделения.
+     *
+     * @return Название подразделения.
+     */
     public String getName() {
         return name;
     }
-
+    /**
+     * Устанавливает новое название для подразделения.
+     *
+     * @param name Новое название подразделения.
+     */
     public void setName(String name) {
         this.name = name;
     }
